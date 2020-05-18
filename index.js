@@ -132,14 +132,25 @@ function scoreboard(inning, numberInnings) {
   let score = {
     'Home': 0,
     'Away': 0,
-}
+  }//score object
   for (let i=0; i<numberInnings; i++){
     score.Home = inning() + score.Home
-    console.log(``)
     score.Away = inning() + score.Away
-  //   console.log(inning())
-  }
-  return score;
-}
 
+    function numberSuffix(){
+      if(i+1 === 1){
+        return 'st'
+      }else if (i+1 === 2){
+        return 'nd'
+      }else if (i+1 === 3){
+        return 'rd'
+      } else {
+        return 'th'
+      }
+    }//numberSuffix
 
+  console.log( `${i+1}${numberSuffix()} inning: ${score.Home} - ${score.Away} `)
+  }//for loop
+  console.log(`Final Score : ${score.Home} - ${score.Away}`)
+}//scoreboard
+scoreboard(inning, 9)
