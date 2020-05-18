@@ -42,6 +42,7 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+Closure is when a function can us variables contained within a parent function. One example is when you have two functions, a parent and a child within it, the child is capable of using variables that were defined in the parent function.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -62,9 +63,11 @@ dansRoll();
 dansRoll();
 ```
 
-a. Where is closure used in this code? How can you tell?
+a. Where is closure used in this code? How can you tell? The closure in this code is the parameter, name, that is created in `personalDice()`. It is a variable that is not created in the child function. Thus it is an example of closure.
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+The name will remain the same but the number could change.
 c. What is the lexical scope of `newRoll`? 
+`newRoll` can only be accessed inside of `function()`.
 
 ### Task 3 - Stretch Goals
 
@@ -81,6 +84,9 @@ See if you can complete one or more of the following challenges:
 console.log("a defined? " + (typeof a !== 'undefined'));
 console.log("b defined? " + (typeof b !== 'undefined'));
 ```
+Both A and B will be undefined because var is function scoped and both A and B are within the function.
+
+B is defined because it is not being declared, merely reasigned?
 
 2. Write a function that would allow you to do this using a closure. (This is another interview question we've seen before - when you're ready for answers, view an explanation [here](https://www.coderbyte.com/algorithm/3-common-javascript-closure-questions)).
 
