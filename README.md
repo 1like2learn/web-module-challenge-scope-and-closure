@@ -84,6 +84,9 @@ See if you can complete one or more of the following challenges:
 console.log("a defined? " + (typeof a !== 'undefined'));
 console.log("b defined? " + (typeof b !== 'undefined'));
 ```
+Both A and B will be undefined because var is function scoped and both A and B are within the function.
+
+B is defined because it is not being declared, merely reasigned?
 
 2. Write a function that would allow you to do this using a closure. (This is another interview question we've seen before - when you're ready for answers, view an explanation [here](https://www.coderbyte.com/algorithm/3-common-javascript-closure-questions)).
 
